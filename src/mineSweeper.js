@@ -1,6 +1,10 @@
 class MineSweeper {
   constructor(width, height) {
     this.createGameBoard(width, height);
+    this.status = 'running';
+  }
+  getStatus() {
+    return this.status;
   }
 
   createGameBoard(width, height) {
@@ -48,6 +52,10 @@ class MineSweeper {
   setSquareValue(x, y, value) {
     if (this.allowOperation(x, y))
       this.gameBoard[this.gameBoard[0].length - 1 - y][x] = value;
+  }
+
+  stepOnSquare(x, y) {
+    this.setSquareValue(x, y, '_');
   }
 }
 
