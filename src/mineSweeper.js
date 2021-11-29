@@ -136,13 +136,15 @@ class MineSweeper {
 
     this.gameBoard.forEach((row, i) => {
       row.forEach((square, j) => {
-        if (this.gameBoard[i][j] == ' ' && this.bombBoard[i][j] != 1) {
-          //       if (this.squareIsSet(i, j)) {
+        if (this.squareIsSet(i, j)) {
           isWinner = false;
         }
       });
     });
     return isWinner;
+  }
+  squareIsSet(i, j) {
+    return this.gameBoard[i][j] == ' ' && this.bombBoard[i][j] != 1;
   }
 }
 
