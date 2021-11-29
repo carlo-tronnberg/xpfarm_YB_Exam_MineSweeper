@@ -48,7 +48,15 @@ class MineSweeper {
     return this.bombBoard;
   }
   getBombAt(x, y) {
-    return this.bombBoard[this.bombBoard[0].length - 1 - y][x];
+    if (
+      x >= 0 &&
+      x < this.gameBoard[0].length &&
+      y >= 0 &&
+      y < this.gameBoard.length
+    ) {
+      return this.bombBoard[this.bombBoard[0].length - 1 - y][x];
+    }
+    return 0;
   }
 
   allowOperation(x, y) {
@@ -69,15 +77,23 @@ class MineSweeper {
       this.status = this.GAME_OVER;
       this.setSquareValue(x, y, 'X');
     } else {
-      if (x == 0 && y == 0) {
-        this.setSquareValue(x, y, 3);
-      } else if (x == 2 && y == 1) {
-        this.setSquareValue(x, y, 4);
-      } else if (x == 0 && y == 3) {
-        this.setSquareValue(x, y, 2);
-      }
-      this.setSquareValue(x, y, '_');
+      this.setSquareValue(x, y, this.getNeighbouringBombsCount(x, y));
     }
+  }
+
+  getNeighbouringBombsCount(x, y) {
+    // Get bomb count for the 8 neighboring squares (but only within the board)
+    var count = 0;
+    count += this.getBombAt(x - 1, y - 1);
+    count += this.getBombAt(x - 1, y);
+    count += this.getBombAt(x - 1, y + 1);
+    count += this.getBombAt(x, y - 1);
+    count += this.getBombAt(x, y + 1);
+    count += this.getBombAt(x + 1, y - 1);
+    count += this.getBombAt(x + 1, y);
+    count += this.getBombAt(x + 1, y + 1);
+
+    return count;
   }
 }
 
