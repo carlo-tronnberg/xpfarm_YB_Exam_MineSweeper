@@ -47,3 +47,5 @@
   - Scenario #3 🟢
   - Scenario #4 🔴 - Bomb Board with wrong dimensions
   - Scenario #4 🟢
+- User story #2 🚧
+  - Scenario #1 🔴 - Permission to step into a square
