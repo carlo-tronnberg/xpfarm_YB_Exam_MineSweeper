@@ -85,7 +85,10 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
   });
 
   describe('US3 Game Over - Lose the game by stepping on a bomb', () => {
-    it.each([[0, 0, GAME_RUNNING]])(
+    it.each([
+      [0, 0, GAME_RUNNING],
+      [1, 1, GAME_OVER],
+    ])(
       'Given the 3x3 Game Board,  When stepping on the square (%i,%i),  Then the game will be %s',
       (x, y, status) => {
         const game = new MineSweeper(3, 3);
