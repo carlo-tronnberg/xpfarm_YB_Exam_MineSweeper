@@ -1,5 +1,8 @@
 const { MineSweeper } = require('../src/mineSweeper');
 
+const GAME_RUNNING = 'running';
+const GAME_OVER = 'Game Over';
+
 describe("I want to play a game of Mine Sweeper where I'll win if I clear the board without stepping on a bomb", () => {
   describe('US1 Game Board Creation', () => {
     it.each([
@@ -82,7 +85,7 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
   });
 
   describe('US3 Game Over - Lose the game by stepping on a bomb', () => {
-    it.each([[0, 0, 'running']])(
+    it.each([[0, 0, GAME_RUNNING]])(
       'Given the 3x3 Game Board,  When stepping on the square (%i,%i),  Then the game will be %s',
       (x, y, status) => {
         const game = new MineSweeper(3, 3);

@@ -1,7 +1,10 @@
 class MineSweeper {
+  GAME_RUNNING = 'running';
+  GAME_OVER = 'Game Over';
+
   constructor(width, height) {
     this.createGameBoard(width, height);
-    this.status = 'running';
+    this.status = this.GAME_RUNNING;
   }
   getStatus() {
     return this.status;
