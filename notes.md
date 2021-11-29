@@ -9,13 +9,22 @@
 - 🚧 In progress
 - ✅ Ready
 - ⛔ Blocker
-- ⚠  Warning 
+- ⚠  Warning
 - 💡 Idea
 - 📌 Pinned idea
-- 📝 Note 
+- 📝 Note
 - 🔨 Refactoring
 ```
 
 ## Progress
 
 ### Pomodoro 🍅 1
+
+- Create notes ✅
+- Writing UAT scenarios ✅
+- Writing user stories ✅
+- Writing scenarios ✅
+- UAT 🚧
+
+- User story #1 🚧
+  - Scenario #1 📝 - Created notes, user stories and scenarios
