@@ -30,5 +30,16 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
         expect(game.getBoard()).toEqual(gameBoard);
       }
     );
+
+    it.each([
+      [3, 3, '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+'],
+      [3, 2, '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+'],
+    ])(
+      'Given a Game Board width 3 and height 3,    When starting the game,    Then I want to create the empty Game Board and get it back as a string',
+      (width, height, gameBoardString) => {
+        const game = new MineSweeper(width, height);
+        expect(game.drawGameBoard()).toEqual(gameBoardString);
+      }
+    );
   });
 });
