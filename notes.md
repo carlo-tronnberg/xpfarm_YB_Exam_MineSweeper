@@ -75,3 +75,6 @@
   - Scenario #1 🔨
   - Scenario #1 🔨
   - Scenario #1 🟢 - [2,3] -- 1
+### Pomodoro 🍅 4
+- User story #4 🚧
+  - Scenario #1 🔴 - [3,3] -- _
