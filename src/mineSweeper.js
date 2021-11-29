@@ -42,9 +42,13 @@ class MineSweeper {
   }
 
   allowOperation(x, y) {
-    return true;
+    return this.gameBoard[this.gameBoard[0].length - 1 - y][x] === ' ';
   }
-  setSquareValue(x, y, value) {}
+
+  setSquareValue(x, y, value) {
+    if (this.allowOperation(x, y))
+      this.gameBoard[this.gameBoard[0].length - 1 - y][x] = value;
+  }
 }
 
 module.exports = { MineSweeper };
