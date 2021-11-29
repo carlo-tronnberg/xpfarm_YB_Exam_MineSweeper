@@ -1,11 +1,10 @@
-const { carlo_t_yb_MineSweep_Exam } = require('../src/mineSweep_Exam');
-
+const { MineSweeper } = require('../src/mineSweep_Exam');
 
 describe('carlo_t_yb_MineSweep_Exam', () => {
   it('Start a new mineSweep_Exam', () => {
-    const mineSweep_Exam = new carlo_t_yb_MineSweep_Exam();
+    const game = new MineSweeper();
 
-    expect(mineSweep_Exam.getStatus()).toEqual('running');
+    expect(game.getStatus()).toEqual('running');
   });
 });
 
@@ -14,8 +13,7 @@ describe('carlo_t_yb_MineSweep_Exam 2', () => {
     [1, 'one'],
     [2, 'two'],
   ])("Given ,      When %i,      Then  '%s'", (x, result) => {
-    const mineSweep_Exam = new carlo_t_yb_MineSweep_Exam();
-    expect(mineSweep_Exam.getValue(x)).toEqual(result);
+    const game = new MineSweeper();
+    expect(game.getValue(x)).toEqual(result);
   });
 });
-

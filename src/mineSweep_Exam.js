@@ -1,4 +1,4 @@
-class carlo_t_yb_MineSweep_Exam {
+class MineSweeper {
   constructor() {
     this.status = 'running';
   }
@@ -13,5 +13,4 @@ class carlo_t_yb_MineSweep_Exam {
   }
 }
 
-module.exports = { carlo_t_yb_MineSweep_Exam };
-
+module.exports = { MineSweeper };
