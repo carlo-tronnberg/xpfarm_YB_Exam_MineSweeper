@@ -50,12 +50,14 @@
   - Scenario #4 🔴 - Bomb Board with wrong dimensions
   - Scenario #4 🟢
 - User story #1 ✅
+
 - User story #2 🚧
   - Scenario #1 🔴 - Permission to step into a square
   - Scenario #1 🟢
   - Scenario #2 🔴 - Block stepping on a square again
   - Scenario #2 🟢
 - User story #2 ✅
+
 - User story #3 🚧
   - Scenario #1 🔴 - Game Over? No bomb -> OK
   - Scenario #1 🟢
@@ -67,6 +69,7 @@
   - Scenario #1 🔴 - Game over
   - Scenario #1 🟢
 - User story #3 ✅
+
 - User story #4 🚧
   - Scenario #1 🔴 - # of neighbours [0,0] -> 3
   - Scenario #1 🟢
@@ -85,6 +88,7 @@
   - Scenario #1 🔴 - [3,3] -- \_
   - Scenario #1 🟢
 - User story #4 ✅
+
 - User story #5 🚧
 
   - Scenario #1 🔴 - Mark a suspicious square that might have a bomb
@@ -95,11 +99,18 @@
   - Scenario #2 🔨
 
 - User story #5 ✅
+
 - User story #6 🚧
   - Scenario #1 🔴 - Game Victory
   - Scenario #1 🟢
   - Scenario #1 🔨
 - User story #6 ✅
+
 - User story #7 🚧
   - Scenario #1 🔴 - Massive cleaning and victory
   - Scenario #1 🟢
+  - Scenario #1 🔨
+- User story #7 ✅
+
+- UAT ✅
+  - Scenario #1 ⚙ - metrics update
