@@ -75,16 +75,21 @@
   - Scenario #1 🔨
   - Scenario #1 🔨
   - Scenario #1 🟢 - [2,3] -- 1
+
 ### Pomodoro 🍅 4
+
 - User story #4 🚧
-  - Scenario #1 🔴 - [3,3] -- _
+  - Scenario #1 🔴 - [3,3] -- \_
   - Scenario #1 🟢
 - User story #5 🚧
+
   - Scenario #1 🔴 - Mark a suspicious square that might have a bomb
   - Scenario #1 🟢
   - Scenario #1 🔨
-  - Scenario #1 🔴 - Unmark a square
-  - Scenario #1 🟢
-  - Scenario #1 🔨
+  - Scenario #2 🔴 - Unmark a square
+  - Scenario #2 🟢
+  - Scenario #2 🔨
+
 - User story #6 🚧
   - Scenario #1 🔴 - Game Victory
+  - Scenario #1 🟢
