@@ -71,3 +71,4 @@
   - Scenario #1 🟢
   - Scenario #1 🔴 - [2,1] -> 4
   - Scenario #1 📝
+  - Scenario #1 🟢
