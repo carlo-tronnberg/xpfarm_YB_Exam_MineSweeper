@@ -35,3 +35,4 @@
   - Scenario #1 🔴 - [1x2]
   - Scenario #1 🟢
   - Scenario #1 🔨
+  - Scenario #1 🟢 - [2x2] and [3x3]
