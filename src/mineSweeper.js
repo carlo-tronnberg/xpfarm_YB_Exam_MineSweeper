@@ -10,10 +10,17 @@ class MineSweeper {
   }
 
   drawGameBoard() {
-    if (this.gameBoard.length == 2 && this.gameBoard[0].length == 3) {
-      return '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+';
+    let gameBoardString = '';
+
+    for (let rowVector of this.gameBoard) {
+      gameBoardString += '+-'.repeat(rowVector.length) + '+\n|';
+      for (let columnVector of rowVector) {
+        gameBoardString += columnVector + '|';
+      }
+      gameBoardString += '\n';
     }
-    return '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+';
+    gameBoardString += '+-'.repeat(this.gameBoard[0].length) + '+';
+    return gameBoardString;
   }
 
   getBoard() {
