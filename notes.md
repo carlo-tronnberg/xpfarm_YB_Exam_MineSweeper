@@ -60,3 +60,5 @@
 - User story #3 🚧
   - Scenario #1 🔴 - Game over
   - Scenario #1 🟢
+- User story #4 🚧
+  - Scenario #1 🔴
