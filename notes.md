@@ -28,3 +28,4 @@
 
 - User story #1 🚧
   - Scenario #1 📝 - Created notes, user stories and scenarios
+  - Scenario #1 🔴 - Game Board Creation
