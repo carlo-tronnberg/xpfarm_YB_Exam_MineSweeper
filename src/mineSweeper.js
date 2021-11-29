@@ -96,6 +96,10 @@ class MineSweeper {
 
     return count;
   }
+
+  markBomb(x, y) {
+    this.setSquareValue(x, y, '*');
+  }
 }
 
 module.exports = { MineSweeper };
