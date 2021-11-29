@@ -70,5 +70,14 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
       expect(game.allowOperation(0, 0)).toEqual(true);
       game.setSquareValue(0, 0, '_');
     });
+
+    it('Given the Game Board,    When stepping on a square,    Then the game should track it and stop further attempts', () => {
+      const game = new MineSweeper(3, 3);
+      expect(game.allowOperation(0, 0)).toEqual(true);
+      game.setSquareValue(0, 0, '_');
+      expect(game.allowOperation(0, 0)).toEqual(false);
+      game.setSquareValue(0, 0, '_');
+      expect(game.allowOperation(1, 0)).toEqual(true);
+    });
   });
 });

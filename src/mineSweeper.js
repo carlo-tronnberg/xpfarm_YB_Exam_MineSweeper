@@ -40,6 +40,11 @@ class MineSweeper {
   getBombs() {
     return this.bombBoard;
   }
+
+  allowOperation(x, y) {
+    return true;
+  }
+  setSquareValue(x, y, value) {}
 }
 
 module.exports = { MineSweeper };
