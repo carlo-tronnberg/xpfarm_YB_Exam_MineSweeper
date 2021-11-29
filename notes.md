@@ -52,3 +52,5 @@
   - Scenario #1 🟢
   - Scenario #2 🔴 - Block stepping on a square again
   - Scenario #2 🟢
+- User story #3 🚧
+  - Scenario #1 🔴 - Game Over
