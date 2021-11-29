@@ -40,3 +40,4 @@
 ### Pomodoro 🍅 2
 - User story #1 🚧
   - Scenario #2 🟢
+  - Scenario #2 🔴 - [3x2]
