@@ -67,3 +67,4 @@
 - User story #4 🚧
   - Scenario #1 🔴 - # of neighbours
   - Scenario #1 🟢
+  - Scenario #1 🔴
