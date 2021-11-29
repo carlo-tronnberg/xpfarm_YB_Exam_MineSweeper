@@ -114,3 +114,4 @@
 
 - UAT ✅
   - Scenario #1 🔨 - Removed code smell: commented line
+  - Scenario #1 🔨 - duplicate rows code smell in test file as reported by SonarCloud
