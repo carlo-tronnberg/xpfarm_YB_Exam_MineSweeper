@@ -63,4 +63,12 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
       expect(game.getBombs()).toEqual(null);
     });
   });
+
+  describe('US2 Allow stepping into a square', () => {
+    it('Given the Game Board,    When stepping on a square,    Then the game should know whether I am allowed to do so', () => {
+      const game = new MineSweeper(3, 3);
+      expect(game.allowOperation(0, 0)).toEqual(true);
+      game.setSquareValue(0, 0, '_');
+    });
+  });
 });
