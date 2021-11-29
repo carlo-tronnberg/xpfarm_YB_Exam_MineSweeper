@@ -65,6 +65,7 @@
   - Scenario #1 🔴 - Game over
   - Scenario #1 🟢
 - User story #4 🚧
-  - Scenario #1 🔴 - # of neighbours
+  - Scenario #1 🔴 - # of neighbours [0,0] -> 3
   - Scenario #1 🟢
-  - Scenario #1 🔴
+  - Scenario #1 🔴 [0,3] -> 2
+  - Scenario #1 🟢
