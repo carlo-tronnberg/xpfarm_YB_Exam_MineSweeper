@@ -155,7 +155,7 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
       [1, 1],
       [1, 2],
     ])(
-      "Given the Game Board,      When identifying a potential bomb square (%1,%1),      Then I want to be able to mark it with a '*'",
+      'Given the Game Board,      When changing my mind about a potential bomb square (%1,%1),      Then I want to be able to unmark a marked square',
       (x, y) => {
         const game = new MineSweeper(4, 4);
         game.setBombs([
