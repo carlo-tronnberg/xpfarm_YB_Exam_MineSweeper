@@ -86,3 +86,5 @@
   - Scenario #1 🔴 - Unmark a square
   - Scenario #1 🟢
   - Scenario #1 🔨
+- User story #6 🚧
+  - Scenario #1 🔴 - Game Victory
