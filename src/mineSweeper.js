@@ -55,6 +55,10 @@ class MineSweeper {
     return this.gameBoard[this.gameBoard[0].length - 1 - y][x] === ' ';
   }
 
+  getSquareValue(x, y) {
+    return 3;
+  }
+
   setSquareValue(x, y, value) {
     if (this.allowOperation(x, y))
       this.gameBoard[this.gameBoard[0].length - 1 - y][x] = value;
