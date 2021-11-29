@@ -1,6 +1,7 @@
 class MineSweeper {
   GAME_RUNNING = 'running';
   GAME_OVER = 'Game Over';
+  GAME_WIN = 'You Win';
 
   constructor(width, height) {
     this.createGameBoard(width, height);
@@ -91,7 +92,13 @@ class MineSweeper {
       message = 'BOOM! - Game Over';
     } else {
       this.setSquareValue(x, y, this.getNeighbouringBombsCount(x, y));
-      message = this.getSquareValue(x, y) + ' bomb(s) around your square.';
+      if (this.winner()) {
+        this.status = this.GAME_WIN;
+        message = 'the land is cleared! GOOD JOB!';
+      } else {
+        this.status = this.GAME_RUNNING;
+        message = this.getSquareValue(x, y) + ' bomb(s) around your square.';
+      }
     }
     this.log(message);
   }
@@ -123,6 +130,19 @@ class MineSweeper {
   }
   valueIsBetween(value, min, max) {
     return value >= min && value <= max;
+  }
+  winner() {
+    var isWinner = true;
+
+    this.gameBoard.forEach((row, i) => {
+      row.forEach((square, j) => {
+        if (this.gameBoard[i][j] == ' ' && this.bombBoard[i][j] != 1) {
+          //       if (this.squareIsSet(i, j)) {
+          isWinner = false;
+        }
+      });
+    });
+    return isWinner;
   }
 }
 
