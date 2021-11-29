@@ -152,8 +152,8 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
     );
 
     it.each([
-      [1, 0],
       [1, 1],
+      [1, 2],
     ])(
       "Given the Game Board,      When identifying a potential bomb square (%1,%1),      Then I want to be able to mark it with a '*'",
       (x, y) => {
@@ -161,7 +161,7 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
         game.setBombs([
           [0, 0, 0, 0],
           [1, 1, 0, 0],
-          [1, 1, 0, 0],
+          [1, 1, 0, 1],
           [0, 1, 0, 1],
         ]);
         game.markBomb(x, y);
