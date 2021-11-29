@@ -56,13 +56,7 @@ class MineSweeper {
   }
 
   getSquareValue(x, y) {
-    if (x == 0 && y == 0) {
-      return 3;
-    } else if (x == 2 && y == 1) {
-      return 4;
-    } else {
-      return 2;
-    }
+    return this.gameBoard[this.gameBoard[0].length - 1 - y][x];
   }
 
   setSquareValue(x, y, value) {
@@ -75,6 +69,13 @@ class MineSweeper {
       this.status = this.GAME_OVER;
       this.setSquareValue(x, y, 'X');
     } else {
+      if (x == 0 && y == 0) {
+        this.setSquareValue(x, y, 3);
+      } else if (x == 2 && y == 1) {
+        this.setSquareValue(x, y, 4);
+      } else if (x == 0 && y == 3) {
+        this.setSquareValue(x, y, 2);
+      }
       this.setSquareValue(x, y, '_');
     }
   }
