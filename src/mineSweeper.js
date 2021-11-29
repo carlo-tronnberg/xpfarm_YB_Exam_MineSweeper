@@ -92,6 +92,7 @@ class MineSweeper {
     count += this.getBombAt(x + 1, y - 1);
     count += this.getBombAt(x + 1, y);
     count += this.getBombAt(x + 1, y + 1);
+    if (count == 0) count = '_';
 
     return count;
   }
