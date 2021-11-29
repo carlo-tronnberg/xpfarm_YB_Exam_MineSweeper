@@ -37,8 +37,10 @@
   - Scenario #1 🔨
   - Scenario #1 🟢 - [2x2] and [3x3]
   - Scenario #2 🔴 - Game Board as a string
+
 ### Pomodoro 🍅 2
-- User story #1 🚧
+
+- User story #1 ✅
   - Scenario #2 🟢
   - Scenario #2 🔴 - [3x2]
   - Scenario #2 🟢
@@ -47,18 +49,21 @@
   - Scenario #3 🟢
   - Scenario #4 🔴 - Bomb Board with wrong dimensions
   - Scenario #4 🟢
-- User story #2 🚧
+- User story #2
   - Scenario #1 🔴 - Permission to step into a square
   - Scenario #1 🟢
   - Scenario #2 🔴 - Block stepping on a square again
   - Scenario #2 🟢
 - User story #3 🚧
-  - Scenario #1 🔴 - Game Over
+  - Scenario #1 🔴 - Game Over? No bomb -> OK
   - Scenario #1 🟢
   - Scenario #1 🔨
+
 ### Pomodoro 🍅 3
-- User story #3 🚧
+
+- User story #3 ✅
   - Scenario #1 🔴 - Game over
   - Scenario #1 🟢
 - User story #4 🚧
-  - Scenario #1 🔴
+  - Scenario #1 🔴 - # of neighbours
+  - Scenario #1 🟢
