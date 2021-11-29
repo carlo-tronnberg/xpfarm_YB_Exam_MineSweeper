@@ -104,7 +104,6 @@ class MineSweeper {
   }
 
   startRecursiveSquareChecking(x, y) {
-    //this.setSquareValue(x, y, this.getNeighbouringBombsCount(x, y));
     this.checkedBoard = Array(this.gameBoard.length)
       .fill()
       .map(() => Array(this.gameBoard[0].length).fill(false));
