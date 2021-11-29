@@ -47,6 +47,9 @@ class MineSweeper {
   getBombs() {
     return this.bombBoard;
   }
+  getBombAt(x, y) {
+    return this.bombBoard[this.bombBoard[0].length - 1 - y][x];
+  }
 
   allowOperation(x, y) {
     return this.gameBoard[this.gameBoard[0].length - 1 - y][x] === ' ';
@@ -58,7 +61,12 @@ class MineSweeper {
   }
 
   stepOnSquare(x, y) {
-    this.setSquareValue(x, y, '_');
+    if (this.getBombAt(x, y) == 1) {
+      this.status = this.GAME_OVER;
+      this.setSquareValue(x, y, 'X');
+    } else {
+      this.setSquareValue(x, y, '_');
+    }
   }
 }
 
