@@ -82,3 +82,4 @@
 - User story #5 🚧
   - Scenario #1 🔴 - Mark a suspicious square that might have a bomb
   - Scenario #1 🟢
+  - Scenario #1 🔨
