@@ -69,4 +69,5 @@
   - Scenario #1 🟢
   - Scenario #1 🔴 [0,3] -> 2
   - Scenario #1 🟢
-  - Scenario #1 🔴 - [2,1] -
+  - Scenario #1 🔴 - [2,1] -> 4
+  - Scenario #1 📝
