@@ -14,6 +14,16 @@ class MineSweeper {
     this.gameBoard = Array(height)
       .fill()
       .map(() => Array(width).fill(' '));
+    this.log('Game created');
+  }
+
+  log(message) {
+    console.log(
+      this.drawGameBoard() + '\n\n[Sandbox %ix%i] %s',
+      this.gameBoard[0].length,
+      this.gameBoard.length,
+      message
+    );
   }
 
   drawGameBoard() {
@@ -73,12 +83,16 @@ class MineSweeper {
   }
 
   stepOnSquare(x, y) {
+    var message = '';
     if (this.getBombAt(x, y) == 1) {
       this.status = this.GAME_OVER;
       this.setSquareValue(x, y, 'X');
+      message = 'BOOM! - Game Over';
     } else {
       this.setSquareValue(x, y, this.getNeighbouringBombsCount(x, y));
+      message = this.getSquareValue(x, y) + ' bomb(s) around your square.';
     }
+    this.log(message);
   }
 
   getNeighbouringBombsCount(x, y) {
@@ -99,6 +113,7 @@ class MineSweeper {
 
   markBomb(x, y) {
     this.setSquareValue(x, y, '*');
+    this.log('Square [' + x + ',' + y + '] flagged as bomb');
   }
 }
 
