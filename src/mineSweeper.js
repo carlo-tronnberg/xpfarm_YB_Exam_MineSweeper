@@ -59,10 +59,8 @@ class MineSweeper {
   }
   getBombAt(x, y) {
     if (
-      x >= 0 &&
-      x < this.gameBoard[0].length &&
-      y >= 0 &&
-      y < this.gameBoard.length
+      this.valueIsBetween(x, 0, this.gameBoard[0].length - 1) &&
+      this.valueIsBetween(y, 0, this.gameBoard.length - 1)
     ) {
       return this.bombBoard[this.bombBoard[0].length - 1 - y][x];
     }
@@ -122,6 +120,9 @@ class MineSweeper {
   unmarkBomb(x, y) {
     this.setSquareValue(x, y, ' ');
     this.log('Square [' + x + ',' + y + '] unflagged as bomb');
+  }
+  valueIsBetween(value, min, max) {
+    return value >= min && value <= max;
   }
 }
 
