@@ -91,7 +91,7 @@ class MineSweeper {
       this.setSquareValue(x, y, 'X');
       message = 'BOOM! - Game Over';
     } else {
-      this.setSquareValue(x, y, this.getNeighbouringBombsCount(x, y));
+      this.startRecursiveSquareChecking(x, y);
       if (this.winner()) {
         this.status = this.GAME_WIN;
         message = 'the land is cleared! GOOD JOB!';
@@ -101,6 +101,34 @@ class MineSweeper {
       }
     }
     this.log(message);
+  }
+
+  startRecursiveSquareChecking(x, y) {
+    //this.setSquareValue(x, y, this.getNeighbouringBombsCount(x, y));
+    this.checkedBoard = Array(this.gameBoard.length)
+      .fill()
+      .map(() => Array(this.gameBoard[0].length).fill(false));
+    // Recursive call
+    this.checkNeighboringSquares(x, y);
+  }
+
+  checkNeighboringSquares(x, y) {
+    if (
+      this.valueIsBetween(x, 0, this.gameBoard[0].length - 1) &&
+      this.valueIsBetween(y, 0, this.gameBoard.length - 1) &&
+      this.getBombAt(x, y) == 0 &&
+      !this.checkedBoard[this.gameBoard[0].length - 1 - y][x]
+    ) {
+      this.setSquareValue(x, y, this.getNeighbouringBombsCount(x, y));
+      this.checkedBoard[this.gameBoard[0].length - 1 - y][x] = true;
+      this.checkNeighboringSquares(x - 1, y);
+      this.checkNeighboringSquares(x - 1, y + 1);
+      this.checkNeighboringSquares(x, y - 1);
+      this.checkNeighboringSquares(x, y + 1);
+      this.checkNeighboringSquares(x + 1, y - 1);
+      this.checkNeighboringSquares(x + 1, y);
+      this.checkNeighboringSquares(x + 1, y + 1);
+    }
   }
 
   getNeighbouringBombsCount(x, y) {

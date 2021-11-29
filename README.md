@@ -131,7 +131,7 @@ So that I can make a step
   Then the game should know whether I am allowed to do so
 ```
 
-#### Scenario #1
+#### Scenario #2
 
 ```
   Given the Game Board
