@@ -9,6 +9,10 @@ class MineSweeper {
       .map(() => Array(width).fill(' '));
   }
 
+  drawGameBoard() {
+    return '+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+\n| | | |\n+-+-+-+';
+  }
+
   getBoard() {
     return this.gameBoard;
   }
