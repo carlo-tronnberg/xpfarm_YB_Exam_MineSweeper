@@ -170,5 +170,4 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
       }
     );
   });
-  });
 });
