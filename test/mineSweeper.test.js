@@ -52,5 +52,15 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
       game.setBombs(bombBoard);
       expect(game.getBombs()).toEqual(bombBoard);
     });
+
+    it('Given a Game Board with width 3 and height 3,    When trying to create a Bomb Board with a different dimension,    Then the bomb board will not be saved', () => {
+      let bombBoard = [
+        [0, 0, 0],
+        [1, 1, 0],
+      ];
+      const game = new MineSweeper(3, 3);
+      game.setBombs(bombBoard);
+      expect(game.getBombs()).toEqual(null);
+    });
   });
 });
