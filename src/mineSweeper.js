@@ -4,11 +4,9 @@ class MineSweeper {
   }
 
   createGameBoard(width, height) {
-    if (width == 1 && height == 1) {
-      this.gameBoard = [[' ']];
-    } else {
-      this.gameBoard = [[' ', ' ']];
-    }
+    this.gameBoard = Array(height)
+      .fill()
+      .map(() => Array(width).fill(' '));
   }
 
   getBoard() {
