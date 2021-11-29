@@ -28,7 +28,14 @@ class MineSweeper {
   }
 
   setBombs(bombBoard) {
-    this.bombBoard = bombBoard;
+    if (
+      bombBoard.length === this.gameBoard.length &&
+      bombBoard[0].length === this.gameBoard[0].length
+    ) {
+      this.bombBoard = bombBoard;
+    } else {
+      this.bombBoard = null;
+    }
   }
   getBombs() {
     return this.bombBoard;
