@@ -170,4 +170,23 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
       }
     );
   });
+
+  describe('US6 Game Victory', () => {
+    it('Given the Game Board,    When stepping on the last bomb-free square,    Then I want to win the Game', () => {
+      const game = new MineSweeper(3, 3);
+      game.setBombs([
+        [0, 0, 0],
+        [1, 1, 0],
+        [0, 1, 0],
+      ]);
+      game.stepOnSquare(0, 0);
+      game.markBomb(2, 2);
+      game.stepOnSquare(0, 2);
+      game.stepOnSquare(1, 2);
+      game.stepOnSquare(2, 0);
+      game.stepOnSquare(2, 1);
+      game.stepOnSquare(2, 2);
+      expect(game.getStatus()).toEqual(GAME_WIN);
+    });
+  });
 });
