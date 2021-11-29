@@ -84,3 +84,4 @@
   - Scenario #1 🟢
   - Scenario #1 🔨
   - Scenario #1 🔴 - Unmark a square
+  - Scenario #1 🟢
