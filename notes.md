@@ -78,3 +78,4 @@
 ### Pomodoro 🍅 4
 - User story #4 🚧
   - Scenario #1 🔴 - [3,3] -- _
+  - Scenario #1 🟢
