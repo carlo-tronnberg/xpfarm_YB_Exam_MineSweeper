@@ -37,3 +37,6 @@
   - Scenario #1 🔨
   - Scenario #1 🟢 - [2x2] and [3x3]
   - Scenario #2 🔴 - Game Board as a string
+### Pomodoro 🍅 2
+- User story #1 🚧
+  - Scenario #2 🟢
