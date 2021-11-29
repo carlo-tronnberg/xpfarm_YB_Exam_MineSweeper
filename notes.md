@@ -50,3 +50,4 @@
 - User story #2 🚧
   - Scenario #1 🔴 - Permission to step into a square
   - Scenario #1 🟢
+  - Scenario #2 🔴 - Block stepping on a square again
