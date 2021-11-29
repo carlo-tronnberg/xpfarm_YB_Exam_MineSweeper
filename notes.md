@@ -43,3 +43,4 @@
   - Scenario #2 🔴 - [3x2]
   - Scenario #2 🟢
   - Scenario #2 🔨
+  - Scenario #3 🔴 - Hidden Bombs Board
