@@ -46,3 +46,4 @@
   - Scenario #3 🔴 - Hidden Bombs Board
   - Scenario #3 🟢
   - Scenario #4 🔴 - Bomb Board with wrong dimensions
+  - Scenario #4 🟢
