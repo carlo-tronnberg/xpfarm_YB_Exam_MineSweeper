@@ -41,5 +41,16 @@ describe("I want to play a game of Mine Sweeper where I'll win if I clear the bo
         expect(game.drawGameBoard()).toEqual(gameBoardString);
       }
     );
+
+    it('Given a Game Board with width 3 and height 3,    When starting the game,    Then I want to create the hidden Bombs Board, matching the Game Board dimension', () => {
+      let bombBoard = [
+        [0, 0, 0],
+        [1, 1, 0],
+        [0, 1, 0],
+      ];
+      const game = new MineSweeper(3, 3);
+      game.setBombs(bombBoard);
+      expect(game.getBombs()).toEqual(bombBoard);
+    });
   });
 });
